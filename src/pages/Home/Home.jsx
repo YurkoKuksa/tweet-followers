@@ -1,5 +1,10 @@
 import { Box } from "./Home.styled";
 
-export const Home = () => {
-  return <Box>Home</Box>;
+const Home = () => {
+  return (
+    <Box>
+      <h2>Home</h2>
+    </Box>
+  );
 };
+export default Home;
