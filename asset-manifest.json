@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tweet-followers/static/css/main.e6c13ad2.css",
+    "main.js": "/tweet-followers/static/js/main.8a81a387.js",
+    "static/js/410.d6dc8155.chunk.js": "/tweet-followers/static/js/410.d6dc8155.chunk.js",
+    "static/js/45.a50a889e.chunk.js": "/tweet-followers/static/js/45.a50a889e.chunk.js",
+    "index.html": "/tweet-followers/index.html",
+    "main.e6c13ad2.css.map": "/tweet-followers/static/css/main.e6c13ad2.css.map",
+    "main.8a81a387.js.map": "/tweet-followers/static/js/main.8a81a387.js.map",
+    "410.d6dc8155.chunk.js.map": "/tweet-followers/static/js/410.d6dc8155.chunk.js.map",
+    "45.a50a889e.chunk.js.map": "/tweet-followers/static/js/45.a50a889e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8a81a387.js"
+  ]
+}
