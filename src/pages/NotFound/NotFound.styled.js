@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d7f7ca;
+  background-color: #e6dcfc;
   height: 100vh;
 `;
 
