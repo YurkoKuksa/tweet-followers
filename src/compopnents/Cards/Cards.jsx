@@ -5,7 +5,7 @@ import {
   Avatar,
   Tweets,
   Follows,
-  Click,
+  // Click,
   Cont,
   ClickActive,
 } from "./Cards.styled";

@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <Box>
-      <h2></h2>
+      <h2>Card List</h2>
       <CardList />
 
       {/* {isLoadMore && !isEmpty && (
