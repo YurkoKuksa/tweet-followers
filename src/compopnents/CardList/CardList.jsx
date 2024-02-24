@@ -1,14 +1,16 @@
 import Cards from "../Cards/Cards";
-import { BoxList } from "./CardList.styled";
+import { BoxList, Ul, Li } from "./CardList.styled";
 
-export const CardList = () => {
+export const CardList = ({ users }) => {
   return (
     <BoxList>
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
+      <Ul>
+        {users.map((item) => (
+          <Li key={item.id}>
+            <Cards item={item} />
+          </Li>
+        ))}
+      </Ul>
     </BoxList>
   );
 };

@@ -8,6 +8,8 @@ const TweetsPage = () => {
 
       <Tweet />
       <Tweet />
+
+      {/* {<Noitems>There are no items</Noitems>} */}
     </BoxTweet>
   );
 };

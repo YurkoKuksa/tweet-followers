@@ -6,14 +6,18 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
+import { Provider } from "react-redux";
+import { store } from "./my-redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/tweet-followers">
-    <ThemeProvider theme={theme}>
-      <App />
-      {/* <ToastContainer autoClose={1000} /> */}
-      <GlobalStyle />
-    </ThemeProvider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter basename="/tweet-followers">
+      <ThemeProvider theme={theme}>
+        <App />
+        {/* <ToastContainer autoClose={1000} /> */}
+        <GlobalStyle />
+      </ThemeProvider>
+    </BrowserRouter>
+  </Provider>
 );

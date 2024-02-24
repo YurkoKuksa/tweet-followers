@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Box = styled.div`
   border-radius: 20px;
-  width: 380px;
+  max-width: 380px;
   height: 460px;
   box-shadow: -3px 7px 21px 0 rgba(0, 0, 0, 0.23);
   background: linear-gradient(142deg, #471ca9 0%, #5736a3 69.1%, #4b2a99 100%);
-
   padding: 28px 36px 36px;
   position: relative;
+
+  margin-bottom: 20px;
 `;
 
 export const Pic = styled.img`
@@ -32,10 +33,8 @@ export const PicBar = styled.img`
 export const Avatar = styled.img`
   position: absolute;
   top: 178px;
-  left: 150px;
-  border-radius: 86px;
-  width: 80px;
-  height: 80px;
+  right: 50%;
+  transform: translateX(50%);
 `;
 
 export const Tweets = styled.p`
