@@ -8,8 +8,7 @@ export const Box = styled.div`
   background: linear-gradient(142deg, #471ca9 0%, #5736a3 69.1%, #4b2a99 100%);
   padding: 28px 36px 36px;
   position: relative;
-
-  margin-bottom: 20px;
+  margin: 0 auto; /* margin-bottom: 20px; */
 `;
 
 export const Pic = styled.img`
