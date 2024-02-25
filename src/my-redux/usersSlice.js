@@ -8,6 +8,7 @@ const initialState = {
   error: null,
   currentPage: 1,
   follower: [],
+  isFinish: false,
 };
 
 const usersSlice = createSlice({
@@ -16,8 +17,9 @@ const usersSlice = createSlice({
   selectors: {
     selectUsers: (state) => state.users,
     selectLoading: (state) => state.loading,
-    selectCurrentpage: (state) => state.currentPage,
+    selectCurrentPage: (state) => state.currentPage,
     selectFollower: (state) => state.follower,
+    selectIsFinish: (state) => state.isFinish,
   },
   reducers: {
     setCurrentPage(state, action) {
@@ -42,7 +44,10 @@ const usersSlice = createSlice({
       })
       .addCase(getUsers.fulfilled, (state, action) => {
         state.loading = false;
-        state.users = action.payload;
+        state.users = [...state.users, ...action.payload];
+        if (action.payload.length === 0) {
+          state.isFinish = true;
+        }
       })
       .addCase(updateUserThunk.fulfilled, (state, action) => {
         const { id, followers } = action.payload;
@@ -57,8 +62,13 @@ const usersSlice = createSlice({
   },
 });
 
-export const { selectUsers, selectLoading, selectCurrentpage, selectFollower } =
-  usersSlice.selectors;
+export const {
+  selectUsers,
+  selectLoading,
+  selectCurrentPage,
+  selectFollower,
+  selectIsFinish,
+} = usersSlice.selectors;
 
 export const {
   setCurrentPage,

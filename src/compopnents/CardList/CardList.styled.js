@@ -6,6 +6,7 @@ export const BoxList = styled.div`
   gap: 20px;
   justify-content: center;
   padding: 0 30px;
+  margin-bottom: 80px;
 `;
 
 export const Ul = styled.ul`

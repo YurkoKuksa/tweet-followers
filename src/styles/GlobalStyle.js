@@ -38,8 +38,6 @@ export const GlobalStyle = createGlobalStyle`
     height: auto;
   }
   
-  
-  // added NEW styles
 html {
   box-sizing: border-box;
   width: 100vw;
@@ -54,13 +52,16 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family:  'Montserrat', sans-serif, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', -apple-system, BlinkMacSystemFont ;
   color: #212121;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
 
 
 `;

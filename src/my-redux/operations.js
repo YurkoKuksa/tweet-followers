@@ -35,11 +35,11 @@ export const updateUserThunk = createAsyncThunk(
   }
 );
 
-export const addFollower = createAsyncThunk(
-  "follower/addfollower",
-  async (followers, thunkAPI) => {
+export const addTweets = createAsyncThunk(
+  "tweets/addtweet",
+  async (tweets, thunkAPI) => {
     try {
-      const { data } = await axios.post("/followers", followers);
+      const { data } = await axios.get("/tweets", tweets);
 
       return data;
     } catch (error) {
@@ -48,14 +48,26 @@ export const addFollower = createAsyncThunk(
   }
 );
 
-// export const deleteCards = createAsyncThunk(
-//   "cards/deleteCards",
-//   async (id, thunkAPI) => {
-//     try {
-//       await api.delete(`/cards/${id}`);
-//       return { id };
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
+export const deleteTweet = createAsyncThunk(
+  "tweets/deleteTweet",
+  async (tweetId, thunkAPI) => {
+    try {
+      await axios.delete(`/tweets/${tweetId}`);
+      return tweetId;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const addTweet = createAsyncThunk(
+  "tweets/addTweet",
+  async (newTweet, thunkAPI) => {
+    try {
+      const { data } = await axios.post("/tweets", newTweet);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

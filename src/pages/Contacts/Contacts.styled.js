@@ -11,7 +11,6 @@ export const MainHeader = styled.h1`
   color: #331678;
 `;
 
-// Man List styled
 export const BoxSmall = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,7 +27,6 @@ export const ListStyle = styled.li`
   margin-bottom: 10px;
 `;
 
-// Woman list styled
 export const ListStyleWoman = styled.li`
   display: flex;
   gap: 15px;
@@ -46,7 +44,6 @@ export const BoxSmallWoman = styled.div`
   align-items: center;
 `;
 
-// address styles
 export const AddressHeader = styled.h2`
   margin: 20px 0;
   color: #331678;

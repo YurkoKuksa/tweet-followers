@@ -17,23 +17,48 @@ export const Pic = styled.img`
   left: 20px;
 `;
 
-export const PicBar = styled.img`
-  width: 380px;
-  height: 8px;
+export const PicBar = styled.div`
+  &::before {
+    content: "";
 
-  box-shadow: inset 0 3px 3px 0 #fbf8ff, 0 3px 3px 0 rgba(0, 0, 0, 0.06),
-    inset 0 -2px 3px 0 #ae7be3;
-  background-color: #ebd8ff;
-  position: absolute;
-  top: 214px;
-  left: 0;
+    width: 380px;
+    height: 8px;
+
+    box-shadow: inset 0 3px 3px 0 #fbf8ff, 0 3px 3px 0 rgba(0, 0, 0, 0.06),
+      inset 0 -2px 3px 0 #ae7be3;
+    background-color: #ebd8ff;
+    position: absolute;
+    top: 214px;
+    left: 0;
+  }
 `;
 
-export const Avatar = styled.img`
+export const Avatar = styled.div`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 178px;
+    right: 50%;
+    transform: translateX(50%);
+    overflow: hidden;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #ebd8ff;
+    box-shadow: inset 0 4px 3px 0 #fbf8ff, 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+      inset 0 -2px 4px 0 #ae7be3;
+  }
+`;
+
+export const UsersPicture = styled.img`
   position: absolute;
-  top: 178px;
+  top: 185px;
   right: 50%;
   transform: translateX(50%);
+  overflow: hidden;
+
+  border-radius: 50%;
+  width: 17%;
 `;
 
 export const Tweets = styled.p`

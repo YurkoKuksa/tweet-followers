@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonSbm = styled.button`
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 10px 20px;
   font-size: 28px;
   font-weight: 700;

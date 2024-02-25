@@ -8,11 +8,10 @@ import {
   Cont,
   ClickActive,
   Click,
+  UsersPicture,
 } from "./Cards.styled";
 import backgroundPicture from "../../assets/img/picture_background.png";
 import picture from "../../assets/img/logo.png";
-import bar from "../../assets/img/rectangle.png";
-import avatar from "../../assets/img/boy.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToFollower,
@@ -40,12 +39,16 @@ const Cards = ({ item }) => {
     <Box>
       <Pic src={picture} alt="Go It" />
       <img src={backgroundPicture} alt="background" />
-      <PicBar src={bar} alt="bar" />
 
-      <Avatar src={avatar} alt="avatar" />
+      <PicBar></PicBar>
+
+      <div>
+        <Avatar></Avatar>
+        <UsersPicture src={item.avatar} alt="user" />
+      </div>
 
       <Tweets>
-        <span>{item.tweets}</span> tweets
+        <span>{item.tweets.toLocaleString()}</span> tweets
       </Tweets>
 
       <Follows>

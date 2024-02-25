@@ -23,4 +23,3 @@ export const Footer = () => {
     </Box>
   );
 };
-//  default Footer;
