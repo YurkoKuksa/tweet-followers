@@ -1,7 +1,7 @@
 import Cards from "../Cards/Cards";
 import { BoxList, Ul, Li, NoItems } from "./CardList.styled";
 
-export const CardList = ({ users }) => {
+export const CardList = ({ users, isLoading }) => {
   return (
     <BoxList>
       {users.length > 0 ? (
@@ -13,7 +13,7 @@ export const CardList = ({ users }) => {
           ))}
         </Ul>
       ) : (
-        <NoItems>There are no items</NoItems>
+        !isLoading && <NoItems>There are no items</NoItems>
       )}
     </BoxList>
   );

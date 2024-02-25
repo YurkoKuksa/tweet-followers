@@ -27,13 +27,11 @@ const Home = () => {
   }, [dispatch, currentPage]);
 
   const handleNextPage = () => {
-    dispatch(getUsers({ page: currentPage + 1, limit: ITEMS_PER_PAGE }));
     dispatch(setCurrentPage(currentPage + 1));
   };
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
-      dispatch(getUsers({ page: currentPage - 1, limit: ITEMS_PER_PAGE }));
       dispatch(setCurrentPage(currentPage - 1));
     }
   };
@@ -41,7 +39,7 @@ const Home = () => {
   return (
     <Box>
       <Title>Card List</Title>
-      <CardList users={users} />
+      <CardList users={users} isLoading={isLoading} />
 
       {isLoading ? (
         <Loader />
@@ -65,3 +63,15 @@ const Home = () => {
   );
 };
 export default Home;
+
+// const handleNextPage = () => {
+//   dispatch(getUsers({ page: currentPage + 1, limit: ITEMS_PER_PAGE }));
+//   dispatch(setCurrentPage(currentPage + 1));
+// };
+
+// const handlePrevPage = () => {
+//   if (currentPage > 1) {
+//     dispatch(getUsers({ page: currentPage - 1, limit: ITEMS_PER_PAGE }));
+//     dispatch(setCurrentPage(currentPage - 1));
+//   }
+// };

@@ -14,7 +14,6 @@ export const Ul = styled.ul`
   width: 100%;
   justify-content: center;
   row-gap: 20px;
-  /* column-gap: 20px; */
 `;
 
 export const Li = styled.li`

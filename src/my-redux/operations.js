@@ -14,7 +14,7 @@ export const getUsers = createAsyncThunk(
           limit,
         },
       });
-      console.log(data);
+
       return data;
     } catch (error) {
       console.log("ERROR->>> ", error);
@@ -23,19 +23,30 @@ export const getUsers = createAsyncThunk(
   }
 );
 
-// export const addCards = createAsyncThunk(
-//   "cards/addCards",
-//   async (cards, thunkAPI) => {
-//     try {
-//       console.log(cards);
-//       const { data } = await api.post("/cards", cards);
-//       console.log(data);
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
+export const updateUserThunk = createAsyncThunk(
+  "users/addusers",
+  async ({ id, users }, thunkAPI) => {
+    try {
+      const response = await axios.put(`/users/${id}`, { followers: users });
+      return { id, followers: response.data.followers };
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const addFollower = createAsyncThunk(
+  "follower/addfollower",
+  async (followers, thunkAPI) => {
+    try {
+      const { data } = await axios.post("/followers", followers);
+
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 // export const deleteCards = createAsyncThunk(
 //   "cards/deleteCards",
